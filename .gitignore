@@ -119,3 +119,4 @@ GitHub.sublime-settings
 
 # local settings - database, secret key
 dev_settings.py
+db.sqlite3
