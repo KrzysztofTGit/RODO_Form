@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Formularz
+{% endblock %}
+
+{% block content %}
+
+    <div class="wrapper">
+        <div id="formContent" style="max-width: 600px">
+            {{ error }}
+            {% if error == "" %}
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="slideshow-container">
+                        <!-- Slide 1 -->
+                        <div class="mySlides fade">
+                            <h2>Formularz indywidualnej zgody na przetwarzanie danych osobowch</h2>
+                            <p>{{ form.first_name.label }}</p>
+                            <p>{{ form.first_name }}</p>
+                            <p>{{ form.last_name.label }}</p>
+                            <p>{{ form.last_name }}</p>
+                            <div class="form-group form-group--buttons">
+                                <button type="button" class="btn next-step" onclick="plusSlides(1)">Dalej</button>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="mySlides fade">
+                            <h2>Formularz indywidualnej zgody na przetwarzanie danych osobowch</h2>
+                            <p>{{ form.email.label }}</p>
+                            <p>{{ form.email }}</p>
+                            <p>{{ form.phone.label }}</p>
+                            <p>{{ form.phone }}</p>
+                            <div class="form-group form-group--buttons">
+                                <button type="button" class="btn prev-step" onclick="plusSlides(-1)">Wstecz</button>
+                                <button type="button" class="btn next-step" onclick="plusSlides(1)">Dalej</button>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="mySlides fade">
+                            <h2>Formularz indywidualnej zgody na przetwarzanie danych osobowch</h2>
+                            <p>{{ form.address.label }}</p>
+                            <p>{{ form.address }}</p>
+                            <p>{{ form.post_code.label }}</p>
+                            <p>{{ form.post_code }}</p>
+                            <p>{{ form.city.label }}</p>
+                            <p>{{ form.city }}</p>
+                            <div class="form-group form-group--buttons">
+                                <button type="button" class="btn prev-step" onclick="plusSlides(-1)">Wstecz</button>
+                                <button type="button" class="btn next-step" onclick="plusSlides(1)">Dalej</button>
+                            </div>
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="mySlides fade">
+                            <h2>Formularz indywidualnej zgody na przetwarzanie danych osobowch</h2>
+                            <p>* pole obowiązkowe</p>
+                            <p>* {{ form.consent_1 }}{{ form.consent_1.label }}</p>
+                            <p>* {{ form.consent_2 }}{{ form.consent_2.label }}</p>
+                            <p>* {{ form.consent_3 }}{{ form.consent_3.label }}</p>
+{#                            <h3>Warto wiedzieć, że:</h3>#}
+{#                            <ol>#}
+{#                                <li>Współadministratorzy...</li>#}
+{#                                <li>Twoje dane osobowe będą...</li>#}
+{#                                <li>Twoje dane będą...</li>#}
+{#                                <li>jeżeli zechcesz, w każdym...</li>#}
+{#                            </ol>#}
+                            <div class="form-group form-group--buttons">
+                                <button type="button" class="btn prev-step" onclick="plusSlides(-1)">Wstecz</button>
+                                <button type="submit" class="btn">Wyślij</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            {% endif %}
+        </div>
+    </div>
+
+{% endblock %}
