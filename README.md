@@ -18,7 +18,7 @@ Project is created with:
 Training object is created using admin panel. The unique link for the training is created. 
 This link can be placed on a webpage or send to interested people by e-mail. The link directs to a RODO form, which collects following data:
 - user's name and surname
-- user's thone number and e-mail
+- user's phone number and e-mail
 - user's address
 - user's permissions to collect and proceed theirs data
 
